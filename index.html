@@ -44,21 +44,35 @@
             overflow-x: hidden;
         }
 
-        .glass-card {
+        /* استایل‌های گلس‌مورفیسم عمومی */
+        .glass-card, .feature-card {
             background: var(--glass-bg);
             backdrop-filter: blur(12px);
             -webkit-backdrop-filter: blur(12px);
             border: 1px solid var(--glass-border);
             border-radius: 16px;
-            padding: 2rem;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
-        .glass-card:hover {
+        .feature-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
         }
 
+        .text-gradient {
+            background: linear-gradient(90deg, #0d6efd, #0dcaf0);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: bold;
+        }
+
+        .feature-icon-wrapper {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+
+        /* استایل‌های اختصاصی بخش تصاویر */
         .glass-image-frame {
             padding: 0.5rem;
             border-radius: 20px;
@@ -75,14 +89,8 @@
         }
 
         .hero-section {
-            padding: 6rem 0;
+            padding: 4rem 0;
             text-align: center;
-        }
-
-        .feature-icon {
-            font-size: 2.5rem;
-            color: var(--primary-color);
-            margin-bottom: 1rem;
         }
 
         .footer-glass {
@@ -140,6 +148,7 @@
 </head>
 <body>
 
+    <!-- بخش هیرو -->
     <div class="container hero-section">
         <h1 class="display-4 fw-bold mb-4">DoOnTime ⏳</h1>
         <p class="lead mb-5 text-muted" style="color: var(--text-muted) !important; max-width: 700px; margin: 0 auto;">
@@ -147,7 +156,6 @@
             پشتیبانی کامل از پیامک، تلگرام و ایمیل در یک داشبورد مدرن.
         </p>
         <div class="d-flex justify-content-center gap-3 flex-wrap">
-            <!-- 🟢 لینک دمو زنده وب‌سایت شما -->
             <a href="https://doontime.mohandeseit.com/" target="_blank" class="btn btn-live shadow-sm">
                 <i class="fa-solid fa-rocket me-2"></i> مشاهده دموی زنده پروژه
             </a>
@@ -157,38 +165,107 @@
         </div>
     </div>
 
-    <!-- بخش ویژگی‌ها -->
-    <div class="container mb-5">
+    <!-- سکشن اول: کاربردهای برنامه -->
+    <section class="container py-5 mt-5 border-top" style="border-color: rgba(255,255,255,0.05) !important;">
+        <div class="text-center mb-5">
+            <h2 class="fw-bold mb-3">کاربردهای <span class="text-gradient">برنامه یادآور</span> DoOnTime</h2>
+            <p class="text-secondary">پاسخگوی تمام نیازهای شما برای مدیریت بهتر زمان و هزینه&zwnj;ها</p>
+        </div>
         <div class="row g-4">
-            <div class="col-md-4">
-                <div class="glass-card h-100 text-center">
-                    <i class="fa-solid fa-bell feature-icon"></i>
-                    <h4 class="fw-bold">یادآوری چندکاناله</h4>
-                    <p style="color: var(--text-muted) !important;">
-                        ارسال دقیق نوتیفیکیشن‌ها از طریق API تلگرام، پنل پیامکی (IPPanel) و ایمیل به صورت همزمان.
-                    </p>
+            <div class="col-md-6 col-lg-4">
+                <div class="p-4 feature-card h-100 d-flex align-items-center gap-3">
+                    <div class="fs-1 text-primary"><i class="fa-solid fa-money-bill-transfer"></i></div>
+                    <div>
+                        <h5 class="fw-bold mb-1 fs-6">یادآور پرداخت قسط</h5>
+                        <p class="text-secondary small mb-0">جلوگیری از جریمه دیرکرد وام&zwnj;های بانکی</p>
+                    </div>
                 </div>
             </div>
-            <div class="col-md-4">
-                <div class="glass-card h-100 text-center">
-                    <i class="fa-solid fa-wallet feature-icon text-success"></i>
-                    <h4 class="fw-bold">سیستم مالی و درگاه</h4>
-                    <p style="color: var(--text-muted) !important;">
-                        مجهز به سیستم شارژ حساب کاربری، اتصال امن به درگاه پرداخت و نمایش موجودی به تومان با تبدیل خودکار.
-                    </p>
+            <div class="col-md-6 col-lg-4">
+                <div class="p-4 feature-card h-100 d-flex align-items-center gap-3">
+                    <div class="fs-1" style="color: #f59e0b;"><i class="fa-solid fa-money-check-dollar"></i></div>
+                    <div>
+                        <h5 class="fw-bold mb-1 fs-6">یادآوری سررسید چک</h5>
+                        <p class="text-secondary small mb-0">حفظ اعتبار و مدیریت دقیق حساب&zwnj;ها</p>
+                    </div>
                 </div>
             </div>
-            <div class="col-md-4">
-                <div class="glass-card h-100 text-center">
-                    <i class="fa-solid fa-calendar-days feature-icon text-warning"></i>
-                    <h4 class="fw-bold">داشبورد و تقویم شمسی</h4>
-                    <p style="color: var(--text-muted) !important;">
-                        رابط کاربری ریسپانسیو با افکت گلس‌مورفیسم، پشتیبانی از دارک‌مود و تبدیل دقیق تاریخ‌های میلادی به جلالی.
-                    </p>
+            <div class="col-md-6 col-lg-4">
+                <div class="p-4 feature-card h-100 d-flex align-items-center gap-3">
+                    <div class="fs-1 text-info"><i class="fa-solid fa-file-invoice-dollar"></i></div>
+                    <div>
+                        <h5 class="fw-bold mb-1 fs-6">یادآور پرداخت قبوض</h5>
+                        <p class="text-secondary small mb-0">پرداخت به موقع قبض آب، برق و گاز</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="p-4 feature-card h-100 d-flex align-items-center gap-3">
+                    <div class="fs-1 text-danger"><i class="fa-solid fa-pills"></i></div>
+                    <div>
+                        <h5 class="fw-bold mb-1 fs-6">یادآور مصرف دارو</h5>
+                        <p class="text-secondary small mb-0">هشدارهای دقیق برای نوبت&zwnj;های پزشکی</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="p-4 feature-card h-100 d-flex align-items-center gap-3">
+                    <div class="fs-1" style="color: #ec4899;"><i class="fa-solid fa-cake-candles"></i></div>
+                    <div>
+                        <h5 class="fw-bold mb-1 fs-6">یادآور تاریخ تولد</h5>
+                        <p class="text-secondary small mb-0">تبریک به موقع تولد و سالگرد ازدواج</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="p-4 feature-card h-100 d-flex align-items-center gap-3">
+                    <div class="fs-1" style="color: #10b981;"><i class="fa-solid fa-list-check"></i></div>
+                    <div>
+                        <h5 class="fw-bold mb-1 fs-6">مدیریت کارهای روزانه</h5>
+                        <p class="text-secondary small mb-0">بهترین جایگزین برای تو دو لیست&zwnj;های کاغذی</p>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
+
+    <!-- سکشن دوم: امکانات هوشمند -->
+    <section class="container py-5 mt-4">
+        <div class="text-center mb-5">
+            <h2 class="fw-bold mb-3">امکانات هوشمند <span class="text-gradient">سامانه یادآور پیامکی</span></h2>
+            <p class="text-secondary">ابزارهایی که برای اتوماسیون کارها به آن&zwnj;ها نیاز دارید.</p>
+        </div>
+        <div class="row g-4">
+            <div class="col-md-6 col-lg-3">
+                <div class="p-4 feature-card h-100">
+                    <div class="feature-icon-wrapper"><i class="fa-brands fa-telegram"></i></div>
+                    <h5 class="fw-bold mb-3">نوتیفیکیشن تلگرام</h5>
+                    <p class="text-secondary small lh-lg">دریافت هشدارهای لحظه&zwnj;ای مستقیماً در چت شخصی تلگرام شما بدون نیاز به نصب اپلیکیشن اضافه.</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="p-4 feature-card h-100">
+                    <div class="feature-icon-wrapper"><i class="fa-solid fa-comment-sms" style="color:#10b981;"></i></div>
+                    <h5 class="fw-bold mb-3">پیامک (SMS)</h5>
+                    <p class="text-secondary small lh-lg">دسترسی به اینترنت ندارید؟ سیستم هوشمند ما یادآورهای ضروری را مستقیماً به گوشی شما پیامک می&zwnj;کند.</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="p-4 feature-card h-100">
+                    <div class="feature-icon-wrapper"><i class="fa-solid fa-envelope-open-text" style="color:#f59e0b;"></i></div>
+                    <h5 class="fw-bold mb-3">اطلاع&zwnj;رسانی ایمیلی</h5>
+                    <p class="text-secondary small lh-lg">گزارش&zwnj;ها و یادآورهای رسمی را می&zwnj;توانید برای خود یا تیمتان به صورت قالب&zwnj;بندی شده ایمیل کنید.</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="p-4 feature-card h-100">
+                    <div class="feature-icon-wrapper"><i class="fa-solid fa-calendar-check" style="color:#ec4899;"></i></div>
+                    <h5 class="fw-bold mb-3">دوره&zwnj;های تکرار شونده</h5>
+                    <p class="text-secondary small lh-lg">تنظیم کارهای روتین با بازه&zwnj;های زمانی منعطف (روزانه، هفتگی، ماهانه یا سالانه) فقط با چند کلیک.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- بخش اسکرین‌شات‌ها -->
     <div class="container mb-5 mt-5">
@@ -221,7 +298,7 @@
         </div>
     </div>
 
-    <!-- فوتر شخصی‌سازی شده -->
+    <!-- فوتر -->
     <footer class="footer-glass">
         <div class="container">
             <h5 class="fw-bold">توسعه داده شده توسط امین ارجمند</h5>
