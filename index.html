@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="mobile-web-app-capable" content="yes">
+    <title>DoOnTime | سیستم هوشمند یادآوری چندکاناله</title>
+    
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Vazirmatn Font -->
+    <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.0.0/Vazirmatn-font-face.css" rel="stylesheet" type="text/css" />
+
+    <style>
+        :root {
+            --bg-color: #edf6ff;
+            --text-main: #0f172a;
+            --text-muted: #475569;
+            --glass-bg: rgba(255, 255, 255, 0.65);
+            --glass-border: rgba(0, 0, 0, 0.06);
+            --primary-color: #0d6efd;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg-color: linear-gradient(135deg, #1f1c2c 0%, #928dab 100%);
+                --text-main: #ffffff;
+                --text-muted: rgba(255, 255, 255, 0.7);
+                --glass-bg: rgba(255, 255, 255, 0.1);
+                --glass-border: rgba(255, 255, 255, 0.15);
+                --primary-color: #0dcaf0;
+            }
+        }
+
+        body {
+            font-family: 'Vazirmatn', sans-serif;
+            background: var(--bg-color);
+            color: var(--text-main);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            overflow-x: hidden;
+        }
+
+        .glass-card {
+            background: var(--glass-bg);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid var(--glass-border);
+            border-radius: 16px;
+            padding: 2rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .glass-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .hero-section {
+            padding: 6rem 0;
+            text-align: center;
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .footer-glass {
+            margin-top: auto;
+            background: var(--glass-bg);
+            backdrop-filter: blur(12px);
+            border-top: 1px solid var(--glass-border);
+            padding: 1.5rem 0;
+            text-align: center;
+        }
+
+        .social-links a {
+            color: var(--text-main);
+            font-size: 1.5rem;
+            margin: 0 10px;
+            transition: color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: var(--primary-color);
+        }
+
+        .btn-custom {
+            background: var(--primary-color);
+            color: #fff;
+            border-radius: 30px;
+            padding: 10px 30px;
+            font-weight: bold;
+            border: none;
+            transition: opacity 0.3s;
+        }
+
+        .btn-custom:hover {
+            opacity: 0.85;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container hero-section">
+        <h1 class="display-4 fw-bold mb-4">DoOnTime ⏳</h1>
+        <p class="lead mb-5 text-muted" style="color: var(--text-muted) !important; max-width: 700px; margin: 0 auto;">
+            یک سیستم مدیریت یادآوری هوشمند و چندکاناله. ساخته شده برای توسعه‌دهندگان و کاربرانی که می‌خواهند هیچ رویداد مهمی را از دست ندهند. 
+            پشتیبانی کامل از پیامک، تلگرام و ایمیل در یک داشبورد مدرن.
+        </p>
+        <div class="d-flex justify-content-center gap-3">
+            <a href="https://github.com/YOUR_GITHUB_USERNAME/DoOnTime" class="btn btn-custom shadow">
+                <i class="fa-brands fa-github me-2"></i> مشاهده در گیت‌هاب
+            </a>
+        </div>
+    </div>
+
+    <div class="container mb-5">
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="glass-card h-100 text-center">
+                    <i class="fa-solid fa-bell feature-icon"></i>
+                    <h4 class="fw-bold">یادآوری چندکاناله</h4>
+                    <p style="color: var(--text-muted) !important;">
+                        ارسال دقیق نوتیفیکیشن‌ها از طریق API تلگرام، پنل پیامکی (IPPanel) و ایمیل به صورت همزمان.
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="glass-card h-100 text-center">
+                    <i class="fa-solid fa-wallet feature-icon text-success"></i>
+                    <h4 class="fw-bold">سیستم مالی و درگاه</h4>
+                    <p style="color: var(--text-muted) !important;">
+                        مجهز به سیستم شارژ حساب کاربری، اتصال امن به درگاه پرداخت و نمایش موجودی به تومان با تبدیل خودکار.
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="glass-card h-100 text-center">
+                    <i class="fa-solid fa-calendar-days feature-icon text-warning"></i>
+                    <h4 class="fw-bold">داشبورد و تقویم شمسی</h4>
+                    <p style="color: var(--text-muted) !important;">
+                        رابط کاربری ریسپانسیو با افکت گلس‌مورفیسم، پشتیبانی از دارک‌مود و تبدیل دقیق تاریخ‌های میلادی به جلالی.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mb-5 text-center">
+        <h3 class="fw-bold mb-4">تکنولوژی‌های استفاده شده</h3>
+        <div class="glass-card d-inline-block px-5 py-3">
+            <span class="badge bg-secondary m-1 fs-6">PHP 8+</span>
+            <span class="badge bg-secondary m-1 fs-6">MySQL</span>
+            <span class="badge bg-secondary m-1 fs-6">Bootstrap 5</span>
+            <span class="badge bg-secondary m-1 fs-6">IPPanel API</span>
+            <span class="badge bg-secondary m-1 fs-6">Carbon / Jalalian</span>
+        </div>
+    </div>
+
+    <footer class="footer-glass">
+        <div class="container">
+            <h5 class="fw-bold">توسعه داده شده توسط امین ارجمند</h5>
+            <p style="color: var(--text-muted) !important; font-size: 0.9rem;">
+                توسعه‌دهنده فول‌استک و متخصص شبکه‌های کامپیوتری
+            </p>
+            <div class="social-links mt-3">
+                <a href="https://aminarjmand.com" target="_blank" title="وب‌سایت شخصی"><i class="fa-solid fa-globe"></i></a>
+                <a href="https://t.me/sibche2013" target="_blank" title="تلگرام"><i class="fa-brands fa-telegram"></i></a>
+                <a href="tel:09159065674" title="تماس"><i class="fa-solid fa-phone"></i></a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
