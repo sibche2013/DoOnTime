@@ -59,6 +59,22 @@
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
         }
 
+        /* استایل مخصوص قاب عکس‌ها */
+        .glass-image-frame {
+            padding: 0.5rem;
+            border-radius: 20px;
+            overflow: hidden;
+        }
+        
+        .glass-image-frame img {
+            border-radius: 14px;
+            transition: transform 0.4s ease;
+        }
+
+        .glass-image-frame:hover img {
+            transform: scale(1.02);
+        }
+
         .hero-section {
             padding: 6rem 0;
             text-align: center;
@@ -121,6 +137,7 @@
         </div>
     </div>
 
+    <!-- بخش ویژگی‌ها -->
     <div class="container mb-5">
         <div class="row g-4">
             <div class="col-md-4">
@@ -153,6 +170,28 @@
         </div>
     </div>
 
+    <!-- بخش جدید: اسکرین‌شات‌ها -->
+    <div class="container mb-5 mt-5">
+        <h3 class="fw-bold mb-4 text-center">نمایی از محیط سیستم</h3>
+        <div class="row g-4">
+            <div class="col-lg-6">
+                <div class="glass-card glass-image-frame text-center">
+                    <!-- 🛑 تصویر داشبورد مدیریت را اینجا قرار دهید -->
+                    <img src="images/admin-panel.png" class="img-fluid" alt="میز کار مدیریت">
+                </div>
+                <h5 class="fw-bold text-center mt-3">میز کار جامع مدیریت</h5>
+            </div>
+            <div class="col-lg-6">
+                <div class="glass-card glass-image-frame text-center">
+                    <!-- 🛑 تصویر پنل کاربری را اینجا قرار دهید -->
+                    <img src="images/user-panel.png" class="img-fluid" alt="پنل کاربری">
+                </div>
+                <h5 class="fw-bold text-center mt-3">پنل کاربری و لیست یادآوری‌ها</h5>
+            </div>
+        </div>
+    </div>
+
+    <!-- بخش تکنولوژی‌ها -->
     <div class="container mb-5 text-center">
         <h3 class="fw-bold mb-4">تکنولوژی‌های استفاده شده</h3>
         <div class="glass-card d-inline-block px-5 py-3">
@@ -164,6 +203,7 @@
         </div>
     </div>
 
+    <!-- فوتر شخصی‌سازی شده -->
     <footer class="footer-glass">
         <div class="container">
             <h5 class="fw-bold">توسعه داده شده توسط امین ارجمند</h5>
